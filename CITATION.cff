@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "CoMB: a coherent-memory Born machine for calorimeter shower generation"
+authors:
+  - family-names: Slim
+    given-names: Jamal
+    affiliation: "Deutsches Elektronen-Synchrotron DESY"
+  - family-names: Monaco
+    given-names: Saverio
+    affiliation: "DESY / RWTH Aachen University"
+  - family-names: Rehm
+    given-names: Florian
+    affiliation: "CERN"
+  - family-names: Krücker
+    given-names: Dirk
+    affiliation: "Deutsches Elektronen-Synchrotron DESY"
+  - family-names: Borras
+    given-names: Kerstin
+    affiliation: "DESY / RWTH Aachen University"
+license: MIT
+repository-code: "https://github.com/jamalslim/comb"

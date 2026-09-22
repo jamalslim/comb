@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Generated results. Everything here is reproducible from the scripts;
+# the two exceptions below are kept because they are NOT.
+outputs/*
+!outputs/.gitkeep
+!outputs/theta_M3C0.npy          # the parameters the hardware job ran
+!outputs/ibm_run_M3W3L2.npz      # the device tokens + job id
+
+figures/
+*.log
+*.aux

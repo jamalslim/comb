@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comb"
+version = "1.0.0"
+description = "CoMB: sequential quantum Born machine with a coherent memory register for autoregressive calorimeter-shower generation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "scikit-learn>=1.3,<1.6", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+hardware = ["qiskit>=1.0", "qiskit-ibm-runtime>=0.20", "qiskit-aer>=0.13"]
+plots = ["mplhep>=0.3"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
