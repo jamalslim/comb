@@ -29,7 +29,7 @@ class DataConfig:
 class TokenizerConfig:
     block_size: int = 3        # b; B = ceil(d / b)
     n_work: int = 3            # K = 2^{n_work} tokens per block
-    detok_mode: str = "neighbor"   # "neighbor" | "gaussian" | "pool"
+    detok_mode: str = "causal"       # the paper's emission, Eq. (emission)
     #   neighbor: conditional pixel means from own + adjacent-block tokens,
     #   residuals drawn from their joint covariance. Declared, data-fit,
     #   identical for all models; recovers cross-block residual covariance

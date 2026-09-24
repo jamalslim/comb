@@ -129,9 +129,12 @@ not stop you. The line entangler routes on heavy-hex without swaps; a ring needs
 **A plotting script cannot find a parameter file.** It names the missing
 file. Regenerate it with the matching `run_d12.py quantum` command.
 
-**Correlations look much worse than expected.** Check that the tokenizer
-is built with `detok_mode="neighbor"`. The default is different, and it
-degrades the cross-block correlations while leaving the loss unchanged.
+**Which decoder turns tokens into pixels.** `detok_mode="causal"`, set in
+`src/comb/config.py`, is the emission described in the paper: each block
+is drawn from its own token, the previous block's token, and the previous
+block's generated values, one block at a time. It cannot connect blocks
+that are not adjacent, so any correlation between them comes from the
+quantum token chain. Other modes exist for comparison only.
 
 ## Data
 

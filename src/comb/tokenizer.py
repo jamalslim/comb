@@ -84,6 +84,11 @@ class BlockTokenizer:
                     C + 1e-12 * np.eye(b))))
             self.pools.append(pools)
             self.gauss.append(gaussians)
+        if self.detok_mode == "causal":
+            # The paper's emission: y_b ~ p(y_b | y_{b-1}, x_b, x_{b-1}).
+            from .emission import CausalPairEmission
+            self.causal = CausalPairEmission(self.blocks, self.K).fit(
+                Y, self.tokenize(Y))
         if self.detok_mode == "neighbor":
             self._fit_neighbor(Y, self.tokenize(Y))
         if self.detok_mode == "gaussian_corr":
@@ -158,6 +163,8 @@ class BlockTokenizer:
         n = tokens.shape[0]
         d = sum(b for _, b in self.blocks)
         Y = np.zeros((n, d))
+        if self.detok_mode == "causal":
+            return self.causal.detokenize(tokens, rng)
         if self.detok_mode == "neighbor":
             mu = self._neighbor_feats(tokens) @ self.nb_W
             Y = mu + rng.standard_normal((n, d)) @ self.nb_chol.T
