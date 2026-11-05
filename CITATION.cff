@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "CoMB: the coherent memory Born machine"
+version: "v1.0.0"
+date-released: "2026-11-05"
+repository-code: "https://github.com/jamalslim/comb"
+license: MIT
+authors:
+  - family-names: "Slim"
+    given-names: "Jamal"
+  - family-names: "Monaco"
+    given-names: "Saverio"
+  - family-names: "Xue"
+    given-names: "Ran"
+  - family-names: "Krücker"
+    given-names: "Dirk"
+  - family-names: "Borras"
+    given-names: "Kerstin"
+preferred-citation:
+  type: article
+  title: "Quantum Generative Modeling with a Coherent Memory, Exact Training and a Memory-Dimension Advantage"
+  year: 2026
+  authors:
+    - family-names: "Slim"
+      given-names: "Jamal"
+    - family-names: "Monaco"
+      given-names: "Saverio"
+    - family-names: "Xue"
+      given-names: "Ran"
+    - family-names: "Krücker"
+      given-names: "Dirk"
+    - family-names: "Borras"
+      given-names: "Kerstin"

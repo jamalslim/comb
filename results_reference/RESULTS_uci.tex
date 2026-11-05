@@ -1,0 +1,22 @@
+\begin{tabular}{lrrrrrrrr}
+\toprule
+model & params & k-point & $\kappa_2/\kappa_3/\kappa_{\rm pairs}/\kappa_{\rm path}$ & height & turning & AUC & conf. & classes \\
+\midrule
+CoMB, $\chi=$4 (k-point + path) & 3136 & 1.077 & 75/78/54/91\% & 1.44 & 1.83 & 0.901 & 0.70 & 2.94 \\
+CoMB, $\chi=$4 (k-point) & 3136 & 0.935 & 80/83/63/82\% & 2.23 & 1.67 & 0.911 & 0.71 & 2.97 \\
+dephased twin, $\chi=$4 (k-point + path) & 3136 & 1.181 & 73/77/43/91\% & 1.66 & 1.73 & 0.905 & 0.71 & 2.97 \\
+dephased twin, $\chi=$4 (k-point) & 3136 & 1.082 & 75/79/52/80\% & 2.32 & 1.85 & 0.913 & 0.72 & 2.97 \\
+classical HMM, $\chi=$16 (k-point) & 28672 & 0.409 & 99/99/94/88\% & 1.60 & 0.24 & 0.813 & 0.77 & 3.19 \\
+classical HMM, $\chi=$4 (k-point + path) & 4480 & 0.681 & 91/91/74/91\% & 1.58 & 1.10 & 0.880 & 0.71 & 3.06 \\
+classical HMM, $\chi=$4 (k-point + path) & 4480 & 0.688 & 92/91/72/91\% & 1.53 & 1.08 & 0.861 & 0.71 & 3.07 \\
+classical HMM, $\chi=$4 (k-point + path) & 4480 & 0.759 & 89/88/69/92\% & 1.50 & 1.17 & 0.902 & 0.71 & 3.00 \\
+classical HMM, $\chi=$4 (k-point) & 4480 & 0.589 & 95/94/79/67\% & 2.19 & 0.80 & 0.891 & 0.74 & 3.11 \\
+general coherent memory, $\chi=$4 (any circuit, 1 env. levels; k-point + path) & 28672 & 0.580 & 97/96/75/90\% & 1.68 & 0.66 & 0.892 & 0.72 & 3.04 \\
+general coherent memory, $\chi=$4 (any circuit, 16 env. levels; k-point + path) & 458752 & 0.577 & 97/96/75/90\% & 1.68 & 0.67 & 0.888 & 0.71 & 3.05 \\
+general coherent memory, $\chi=$4 (any circuit, 16 env. levels; k-point + path) & 458752 & 0.575 & 97/96/75/90\% & 1.70 & 0.71 & 0.899 & 0.72 & 3.03 \\
+general coherent memory, $\chi=$4 (any circuit, 16 env. levels; k-point + path) & 458752 & 0.579 & 97/96/75/90\% & 1.70 & 0.68 & 0.893 & 0.71 & 3.02 \\
+general memory, dephased, $\chi=$4 (any circuit, 16 env. levels; k-point + path) & 458752 & 0.705 & 92/91/69/90\% & 1.60 & 1.05 & 0.902 & 0.70 & 3.04 \\
+general memory, dephased, $\chi=$4 (any circuit, 16 env. levels; k-point + path) & 458752 & 0.682 & 93/92/71/90\% & 1.66 & 1.07 & 0.878 & 0.70 & 3.05 \\
+general memory, dephased, $\chi=$4 (any circuit, 16 env. levels; k-point + path) & 458752 & 0.666 & 93/92/72/90\% & 1.62 & 1.02 & 0.890 & 0.70 & 3.04 \\
+\bottomrule
+\end{tabular}
