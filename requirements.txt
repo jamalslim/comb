@@ -1,0 +1,11 @@
+# tested with Python 3.12, numpy 2.4, scipy 1.17, scikit-learn 1.8, matplotlib 3.10
+numpy
+scipy
+scikit-learn
+matplotlib
+h5py
+mplhep
+# device runs only:
+# qiskit
+# qiskit-aer
+# qiskit-ibm-runtime

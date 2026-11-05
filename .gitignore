@@ -1,0 +1,12 @@
+outputs/
+data/
+results_reference/
+maxwell/logs/*
+!maxwell/logs/.gitkeep
+maxwell/seed_runs.csv
+maxwell/seed_summary.json
+maxwell/summary_*.txt
+__pycache__/
+*.pyc
+slurm-*.out
+.DS_Store
