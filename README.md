@@ -40,7 +40,7 @@ repository.
 `prepare` downloads CaloChallenge Dataset 1 (photons, Zenodo record 8099322, about 0.5 GB) into `data/`; it needs
 internet access once. `--layer-share 0.2` adds the layer-resolved terms of the loss, as for every model of the paper,
 and the run name then ends in `_ly`. `--tag _quickstart` gives the run its own name, so it never overwrites the trained
-models of the release asset. `sample` needs the trained file with `--run`.
+models in `outputs/runs/`. `sample` needs the trained file with `--run`.
 
 On one core, training takes about 1.8 s per step (3,000 steps: about an hour and a half), sampling about a minute and
 the figures about 30 seconds. The baselines are `--model hmm` (classical hidden Markov model) and `--model dephased`
@@ -75,8 +75,23 @@ are built in `comb/showers/zoo.py` and listed module by module for the digits in
 | Every number of the paper | `scripts/make_paper_numbers.py` (writes into `outputs/paper/`) |
 | Every figure of the paper | `python plot/make_all.py` |
 
-The trained parameters, the digits reference results and the record of the device run (job `db34tb7r11fs7397r770`)
-are attached to the GitHub release `v1.0.0` as `comb_trained_parameters_v1.0.0.tar.gz`.
+## Results in this repository
+
+* `outputs/runs/`: the trained shower models behind the figures (CoMB seed 0, classical HMM seed 1), the model executed
+  on the device and the hardware-compatible model
+* `outputs/hardware/`: the records of both device runs on `ibm_kingston` (jobs `db34tb7r11fs7397r770` and
+  `db34m0m8v0ts73c3t580`): the measured counts and the showers completed from them
+* `results_reference/`: the digits reference models, their metrics and the result tables
+
+`outputs/README.md` describes every file. The parameters of every seed of the seed studies (30 per model) are not
+included; the scripts in `maxwell/` produce them.
+
+## Data
+
+`data/` is filled by the scripts. `python scripts/comb_ds1.py prepare` downloads CaloChallenge Dataset 1 (photons,
+Zenodo record 8099322); its raw file (174 MB) is larger than GitHub accepts, so it is not stored here.
+`python scripts/comb_strokes.py prepare --data uci` builds the pen strokes from the copy of the UCI digits that ships
+with scikit-learn.
 
 ## Tests
 
@@ -85,6 +100,11 @@ are attached to the GitHub release `v1.0.0` as `comb_trained_parameters_v1.0.0.t
 
 The tests compare the code with independent references: brute-force enumeration of every token sequence,
 finite-difference gradients, density-matrix simulation and sampling.
+
+## Earlier version
+
+The code of the first version of the paper (arXiv:2609.23050v1), with the six-qubit register and the token
+readout, is kept unchanged at the tag `arxiv-v1` of this repository.
 
 ## Citation
 

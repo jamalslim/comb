@@ -15,7 +15,7 @@ the source's after the other listed changes.
 | `comb/digits/hqmm.py` | `comb2/comb/hqmm.py` in comb_v99 (digits) | moved, one statement per line | `b5b35226ca9cb27f` |
 | `comb/digits/kpoint.py` | `comb2/comb/kpoint.py` in comb_v99 (digits) | moved, one statement per line | `993f4ebfca46e11a` |
 | `comb/digits/mmd.py` | `comb2/comb/mmd.py` in comb_v99 (digits) | moved | `0a7ed26fcfd2f9f6` |
-| `comb/digits/model.py` | `comb2/comb/model.py` in comb_v99 (digits) | moved, one statement per line | `3d35969528001145` |
+| `comb/digits/model.py` | `comb2/comb/model.py` in comb_v99 (digits) | moved, one statement per line, docstrings | `3d35969528001145` |
 | `comb/digits/noise.py` | `comb2/comb/noise.py` in comb_v99 (digits) | moved, one statement per line | `02ae2c0be947bd05` |
 | `comb/digits/noisytree.py` | `comb2/comb/noisytree.py` in comb_v99 (digits) | moved, one statement per line | `bde2019f9d81ea2e` |
 | `comb/digits/pencf.py` | `comb2/comb/pencf.py` in comb_v99 (digits) | moved, one statement per line | `589280502ed2cc1e` |
@@ -28,7 +28,7 @@ the source's after the other listed changes.
 | `comb/showers/envmem.py` | `comb/envmem.py` in Maxwell tree (newest shower code) | moved, one statement per line | `457240d6e7f5eaf3` |
 | `comb/showers/evaluate.py` | `comb/evaluate.py` in Maxwell tree (newest shower code) | moved | `4061658532a28794` |
 | `comb/showers/mmd.py` | `comb/mmd.py` in Maxwell tree (newest shower code) | moved | `0a7ed26fcfd2f9f6` |
-| `comb/showers/model.py` | `comb/model.py` in Maxwell tree (newest shower code) | moved, one statement per line | `f08e07b0cbcfeb84` |
+| `comb/showers/model.py` | `comb/model.py` in Maxwell tree (newest shower code) | moved, one statement per line, docstrings | `f08e07b0cbcfeb84` |
 | `comb/showers/noise.py` | `comb/noise.py` in Maxwell tree (newest shower code) | moved, one statement per line | `7d80553f0c4f24b0` |
 | `comb/showers/plots_ds1.py` | `comb/plots_ds1.py` in Maxwell tree (newest shower code) | moved, one statement per line | `6512c8647259934a` |
 | `comb/showers/qiskit_comb.py` | `comb/qiskit_comb.py` in Maxwell tree (newest shower code) | moved, one statement per line | `8fa30a56764aebb1` |

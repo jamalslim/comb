@@ -1,5 +1,5 @@
 """
-Quantum jump generator (CoMB).
+CoMB: the coherent memory Born machine.
 
 A chi-dimensional coherent memory (n_m qubits) generates a d-dimensional
 continuous sample one coordinate ("pixel") at a time.  For pixel beta:

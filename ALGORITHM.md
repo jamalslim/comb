@@ -27,17 +27,17 @@ PROPERTIES (proved in the draft, verified in scripts/test_comb.py)
   dephasing the memory after each step gives the classical chi-state chain with the same parameters (the "dephased twin");
   n_sub > 1 rounds per coordinate is supported (window = counting statistics; converges to photon counting) -- not used by default.
 
-WHAT THE OLD CoMB PARTS BECOME (ablations, same register) -- all inside this repository now
-  readout ablation : frozen k-means codewords + causal emission instead of g_beta   (comb/token/, scripts/token/run_d12.py; data/cal_shower_img_12q.npy)
-  objective ablation: teacher-forced blockwise kernel score instead of the exact free-running MMD (comb/token/train.py blockwise score; comb/token/mmd.py joint MMD)
-  memory ablation  : n_m = 0, and the dephased twin
-  hardware         : outputs/hardware/ holds the ibm_kingston token-readout run (theta_M3C0.npy, ibm_run_M3W3L2.npz);
-                     comb/qiskit_comb.py + scripts/hardware_run.py build, verify (numpy + Aer) and run the one-round circuit
-                     above on a device and decode its bits into showers; noise-aware training: comb/noise.py
+ABLATIONS (same register, same code)
+  memory ablation  : n_m = 0, and the dephased twin (--model dephased), which removes the memory's coherence
+  hardware         : comb/showers/qiskit_comb.py + scripts/hardware_run.py build, verify (numpy + Aer) and run the round
+                     circuit above on a device and decode its bits into showers; the records of the ibm_kingston runs
+                     come with the release asset (outputs/hardware/)
+  noise            : comb/showers/noise.py (exact noisy model)
 
-FILES   comb/model.py (register, instruments, CF, sampling)  comb/train.py (exact training)  comb/mmd.py (spectrum, MMD)
-        comb/zoo.py (specs, save/load)  comb/noise.py (exact noisy model)  comb/data.py (d12, d25, ds1)
-        comb_ds1.py (prepare / train / sample / plot for Dataset 1)  scripts/test_comb.py (verification suite: ALL PASS)
-        comb/qiskit_comb.py, scripts/hardware_run.py (device path)  comb/token/, scripts/token/ (ablation path: CoMB v2 code)
-VERIFIED HERE: gate list -> unitary 8e-16; count convention vs instrument 2e-16; test suite ALL PASS; token pipeline loads.
+FILES   comb/showers/model.py (register, instruments, CF, sampling)  comb/showers/train.py (exact training)
+        comb/showers/mmd.py (spectrum, MMD)  comb/showers/zoo.py (specs, save/load)  comb/showers/data.py (Dataset 1)
+        scripts/comb_ds1.py (prepare / train / sample / plot for Dataset 1)  scripts/test_comb.py (verification suite)
+        comb/showers/qiskit_comb.py, scripts/hardware_run.py (device path)
+        comb/digits/ and scripts/comb_strokes.py: the handwritten digits (docs/digits_overview.md lists every module)
+VERIFIED: gate list -> unitary 8e-16; count convention vs instrument 2e-16; test suite passes.
 TO VERIFY ON YOUR MACHINE (qiskit): python scripts/hardware_run.py verify outputs/runs/<run>.npz   (TV at floor)
